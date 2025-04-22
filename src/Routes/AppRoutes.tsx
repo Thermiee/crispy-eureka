@@ -1,6 +1,11 @@
+import NavLayout from "../Layout";
 import Home from "../Pages";
 
 export const HomeRoutes = {
   path: "/",
-  element: <Home />,
+  element: <NavLayout />,
+  children: [
+  { path: "/", element: <Home /> },     
+  ] 
+
 };
