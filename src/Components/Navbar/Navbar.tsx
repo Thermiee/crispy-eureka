@@ -38,7 +38,7 @@ const NavBar: React.FC = () => {
                   isActive("/apartment") ? "text-primary" : ""
                 }`}
               >
-                Apartments
+
               </Link>
               <Link
                 to="/about-us"
@@ -46,7 +46,7 @@ const NavBar: React.FC = () => {
                   isActive("/faqs") ? "text-primary" : ""
                 }`}
               >
-                About Us
+
               </Link>
               <Link
                 to="/faqs"
@@ -54,7 +54,7 @@ const NavBar: React.FC = () => {
                   isActive("/faqs") ? "text-primary" : ""
                 }`}
               >
-                FAQs
+
               </Link>
 
               <Link
@@ -63,7 +63,7 @@ const NavBar: React.FC = () => {
                   isActive("/contact") ? "text-primary" : ""
                 }`}
               >
-                Contact
+
               </Link>
             </div>
           </div>
@@ -107,63 +107,88 @@ const NavBar: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className={`${isMobileMenuOpen ? "block" : "hidden"} lg:hidden`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 text-white sm:px-3">
-          <Link
-            to="/"
-            className={`block px-3 py-2 rounded-md text-base font-medium ${
-              isActive("/")
-                ? "text-primary"
-                : "text-tertiary hover:bg-primary hover:text-white"
-            }`}
-            onClick={toggleMobileMenu}
+      <div
+        className={`${
+          isMobileMenuOpen ? "block" : "hidden"
+        } fixed inset-0 z-50 bg-black/30 backdrop-blur-lg lg:hidden`}
+      >
+        <button
+          onClick={toggleMobileMenu}
+          className="absolute top-4 right-4 p-2 text-white hover:text-gray-200"
+        >
+          <svg
+            className="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            Home
-          </Link>
-          <Link
-            to="/apartment"
-            onClick={toggleMobileMenu}
-            className={`block px-3 py-2 rounded-md w-[100px] text-base font-medium ${
-              isActive("/shortlets")
-                ? "text-primary"
-                : "text-tertiary hover:bg-primary hover:text-white"
-            }`}
-          >
-            Apartments
-          </Link>
-          <Link
-            to="/about-us"
-            onClick={toggleMobileMenu}
-            className={`block px-3 py-2 rounded-md  w-[100px]  text-base font-medium ${
-              isActive("/faqs")
-                ? "textprimary0"
-                : "text-tertiary hover:bg-primary hover:text-white"
-            }`}
-          >
-            About Us
-          </Link>
-          <Link
-            to="/faqs"
-            onClick={toggleMobileMenu}
-            className={`block px-3 py-2 rounded-md  w-[100px]  text-base font-medium ${
-              isActive("/faqs")
-                ? "textprimary0"
-                : "text-tertiary hover:bg-primary hover:text-white"
-            }`}
-          >
-            FAQs
-          </Link>
-          <Link
-            to="/contact"
-            onClick={toggleMobileMenu}
-            className={`block px-3 py-2 rounded-md  w-[100px]  text-base font-medium ${
-              isActive("/contact")
-                ? "text-primary"
-                : "text-tertiary hover:bg-primary hover:text-white"
-            }`}
-          >
-            Contact
-          </Link>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        <div className="flex items-center justify-center h-full">
+          <div className="space-y-6 text-center">
+            <Link
+              to="/"
+              className={`block px-3 py-2 text-2xl font-medium ${
+                isActive("/")
+                  ? "text-primary"
+                  : "text-white hover:text-primary/80"
+              }`}
+              onClick={toggleMobileMenu}
+            >
+              Home
+            </Link>
+            <Link
+              to="/apartment"
+              onClick={toggleMobileMenu}
+              className={`block px-3 py-2 text-2xl font-medium ${
+                isActive("/apartment")
+                  ? "text-primary"
+                  : "text-white hover:text-primary/80"
+              }`}
+            >
+
+            </Link>
+            <Link
+              to="/about-us"
+              onClick={toggleMobileMenu}
+              className={`block px-3 py-2 text-2xl font-medium ${
+                isActive("/about-us")
+                  ? "text-primary"
+                  : "text-white hover:text-primary/80"
+              }`}
+            >
+
+            </Link>
+            <Link
+              to="/faqs"
+              onClick={toggleMobileMenu}
+              className={`block px-3 py-2 text-2xl font-medium ${
+                isActive("/faqs")
+                  ? "text-primary"
+                  : "text-white hover:text-primary/80"
+              }`}
+            >
+
+            </Link>
+            <Link
+              to="/contact"
+              onClick={toggleMobileMenu}
+              className={`block px-3 py-2 text-2xl font-medium ${
+                isActive("/contact")
+                  ? "text-primary"
+                  : "text-white hover:text-primary/80"
+              }`}
+            >
+
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
