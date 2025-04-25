@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
-import { getTeamDetails } from "../Services";
+import { getCompetition } from "../Services";
+
 
 const Home: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getTeamDetails("arsenal");
+        const data = await getCompetition("premier-league");
         console.log(data);
       } catch (error) {
         console.error("Error fetching data:", error);
