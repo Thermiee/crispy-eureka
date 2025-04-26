@@ -27,9 +27,6 @@ export const MainButton = ({
     type={type}
     className={` p-3 h-[41px] text-[16px] text-white justify-center flex items-center rounded-3xl bg-primary font-light border hover:bg-white hover:text-primary ${className} `}
     {...props}
-    // style={{
-    //   background: `linear-gradient(106deg, #0078FF 23.74%, #0045D8 81.57%) `,
-    // }}
     onClick={onClick}
     disabled={disabled}
   >
