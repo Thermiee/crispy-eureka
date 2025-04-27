@@ -5,11 +5,14 @@ export const HomeRoutes = {
   path: "/",
   element: <NavLayout />,
   children: [
-  { path: "/", element: <Home /> },   
-  {
-    path: "league",
-    element: <div>League</div>,
-  }  
-  ] 
-
+    { path: "/", element: <Home /> },
+    {
+      path: "league",
+      element: <div>League</div>,
+    },
+    {
+      path: "team",
+      element: <div>Team</div>,
+    },
+  ],
 };
