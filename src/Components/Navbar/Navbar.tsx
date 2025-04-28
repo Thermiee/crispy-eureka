@@ -33,38 +33,34 @@ const NavBar: React.FC = () => {
                 Home
               </Link>
               <Link
-                to="/apartment"
+                to="/league"
                 className={`px-3 py-2 text-sm font-medium ${
                   isActive("/apartment") ? "text-primary" : ""
                 }`}
               >
-
+                League
               </Link>
               <Link
-                to="/about-us"
+                to="/team"
                 className={`px-3 py-2 text-sm font-medium ${
                   isActive("/faqs") ? "text-primary" : ""
                 }`}
               >
-
+                Team
               </Link>
               <Link
                 to="/faqs"
                 className={`px-3 py-2 text-sm font-medium ${
                   isActive("/faqs") ? "text-primary" : ""
                 }`}
-              >
-
-              </Link>
+              ></Link>
 
               <Link
                 to="/contact"
                 className={`px-3 py-2 text-sm font-medium ${
                   isActive("/contact") ? "text-primary" : ""
                 }`}
-              >
-
-              </Link>
+              ></Link>
             </div>
           </div>
 
@@ -145,7 +141,7 @@ const NavBar: React.FC = () => {
               Home
             </Link>
             <Link
-              to="/apartment"
+              to="/league"
               onClick={toggleMobileMenu}
               className={`block px-3 py-2 text-2xl font-medium ${
                 isActive("/apartment")
@@ -153,10 +149,10 @@ const NavBar: React.FC = () => {
                   : "text-white hover:text-primary/80"
               }`}
             >
-
+              League
             </Link>
             <Link
-              to="/about-us"
+              to="/team"
               onClick={toggleMobileMenu}
               className={`block px-3 py-2 text-2xl font-medium ${
                 isActive("/about-us")
@@ -164,7 +160,7 @@ const NavBar: React.FC = () => {
                   : "text-white hover:text-primary/80"
               }`}
             >
-
+              Team
             </Link>
             <Link
               to="/faqs"
@@ -174,9 +170,7 @@ const NavBar: React.FC = () => {
                   ? "text-primary"
                   : "text-white hover:text-primary/80"
               }`}
-            >
-
-            </Link>
+            ></Link>
             <Link
               to="/contact"
               onClick={toggleMobileMenu}
@@ -185,9 +179,7 @@ const NavBar: React.FC = () => {
                   ? "text-primary"
                   : "text-white hover:text-primary/80"
               }`}
-            >
-
-            </Link>
+            ></Link>
           </div>
         </div>
       </div>
